@@ -228,6 +228,7 @@ function onClickAllRecipes() {
 }
 
 function filterRecipes(category) {
+    console.log("fileter");
     recipeContainer.innerHTML = '';
     jsonData.filter((recipe) => {
         if (category === "veg" && recipe.type === "veg") {
@@ -238,7 +239,7 @@ function filterRecipes(category) {
     });
 }
 
-function filterRecipes(condition) {
+function filterRating(condition) {
     recipeContainer.innerHTML = '';
     jsonData.filter((recipe) => {
         if (condition === "above" && recipe.rating > 4.5) {
@@ -250,12 +251,6 @@ function filterRecipes(condition) {
 }
 
 displayAllRecipes();
-
-function onMenuClick() {
-    const menu = document.createElement("div");
-    menu.classList.add = "menu-box";
-    menu.i
-}
 
 
 
