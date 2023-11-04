@@ -15,8 +15,8 @@
 <body>
   <div class="container">
     <div id="navbar">
-      <div>
-        <img id="mobile-menu-icon" src="./images/menu.svg" alt="" />
+      <div style="display: flex; align-items: center;">
+        <img stye="padding-left: 10px;" onclick="onMenuClick()" id="mobile-menu-icon" src="./images/menu.svg" alt="" />
         <img src="./images/Cookpal 1.svg" alt="" />
       </div>
       <nav>
@@ -29,7 +29,7 @@
     <div class="hero-section">
       <div class="hero-content">
         <p>Trending now</p>
-        <h2>Mike’s famous salad<br />with cheese</h2>
+        <h2>Mikes famous salad<br />with cheese</h2>
         <p>By John Mike</p>
       </div>
     </div>
@@ -45,15 +45,15 @@
       </div>
 
       <div class="filter-div-container">
-        <div id="all" class="filters-div">
+        <div id="all" class="filters-div" onclick=onClickAllRecipes()>
           <p>All Recipes</p>
           <p>&gt</p>
         </div>
-        <div id="veg" class="filters-div">
+        <div id="veg" class="filters-div" onclick="filterRecipes('veg')">
           <p>Veg Recipes</p>
           <p>&gt</p>
         </div>
-        <div id="non-veg" class="filters-div">
+        <div id="non-veg" class="filters-div" onclick="filterRecipes('non-veg')">
           <p>Non-Veg Recipes</p>
           <p>&gt</p>
         </div>
@@ -66,247 +66,16 @@
         <div>
           <p>Ratings</p>
           <div>
-            <input id="above" type="radio" name="rating" />
-            <label for="above">4 and Above</label>
+            <input id="above" type="radio" onclick="filterRecipes('above')" name="rating" />
+            <label for="above">4.5 and Above</label>
           </div>
           <div>
-            <input type="radio" name="rating" id="below" />
+            <input type="radio" name="rating" id="below" onclick="filterRecipes('below')" />
             <label for="below">Below 4</label>
           </div>
         </div>
       </div>
-      <div id="cards-container">
-        <div class="product-card">
-          <img src="./images/image/rounded(1).svg" alt="" />
-          <p id="category">veg</p>
-          <div class="title-rating">
-            <p class="title">Russian Salad</p>
-            <div>
-              <img src="./images/star.svg" alt="" />
-              <span>4.0</span>
-            </div>
-          </div>
-          <div class="time-likes">
-            <p class="time">40 min</p>
-            <div>
-              <img src="./images/like.svg" alt="" />
-              <img src="./images/comments.svg" alt="" />
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img src="./images/image/rounded(2).svg" alt="" />
-          <p id="category">veg</p>
-          <div class="title-rating">
-            <p class="title">Indian Salad</p>
-            <div>
-              <img src="./images/star.svg" alt="" />
-              <span>4.5</span>
-            </div>
-          </div>
-          <div class="time-likes">
-            <p class="time">40 min</p>
-            <div>
-              <img src="./images/like.svg" alt="" />
-              <img src="./images/comments.svg" alt="" />
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img src="./images/image/rounded(4).svg" alt="" />
-          <p id="category">veg</p>
-          <div class="title-rating">
-            <p class="title">chinese Salad</p>
-            <div>
-              <img src="./images/star.svg" alt="" />
-              <span>3.5</span>
-            </div>
-          </div>
-          <div class="time-likes">
-            <p class="time">40 min</p>
-            <div>
-              <img src="./images/like.svg" alt="" />
-              <img src="./images/comments.svg" alt="" />
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img src="./images/image/rounded(1).svg" alt="" />
-          <p id="category">veg</p>
-          <div class="title-rating">
-            <p class="title">Russian Salad</p>
-            <div>
-              <img src="./images/star.svg" alt="" />
-              <span>4.5</span>
-            </div>
-          </div>
-          <div class="time-likes">
-            <p class="time">40 min</p>
-            <div>
-              <img src="./images/like.svg" alt="" />
-              <img src="./images/comments.svg" alt="" />
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img src="./images/image/rounded(2).svg" alt="" />
-          <p id="category">veg</p>
-          <div class="title-rating">
-            <p class="title">Indian Salad</p>
-            <div>
-              <img src="./images/star.svg" alt="" />
-              <span>4.0</span>
-            </div>
-          </div>
-          <div class="time-likes">
-            <p class="time">40 min</p>
-            <div>
-              <img src="./images/like.svg" alt="" />
-              <img src="./images/comments.svg" alt="" />
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img src="./images/image/rounded(4).svg" alt="" />
-          <p id="category">veg</p>
-          <div class="title-rating">
-            <p class="title">Chinese Salad</p>
-            <div>
-              <img src="./images/star.svg" alt="" />
-              <span>3.0</span>
-            </div>
-          </div>
-          <div class="time-likes">
-            <p class="time">40 min</p>
-            <div>
-              <img src="./images/like.svg" alt="" />
-              <img src="./images/comments.svg" alt="" />
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img src="./images/image/rounded(1).svg" alt="" />
-          <p id="category">veg</p>
-          <div class="title-rating">
-            <p class="title">Russian Salad</p>
-            <div>
-              <img src="./images/star.svg" alt="" />
-              <span>3.5</span>
-            </div>
-          </div>
-          <div class="time-likes">
-            <p class="time">40 min</p>
-            <div>
-              <img src="./images/like.svg" alt="" />
-              <img src="./images/comments.svg" alt="" />
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img src="./images/image/rounded(2).svg" alt="" />
-          <p id="category">veg</p>
-          <div class="title-rating">
-            <p class="title">Russian Salad</p>
-            <div>
-              <img src="./images/star.svg" alt="" />
-              <span>4.0</span>
-            </div>
-          </div>
-          <div class="time-likes">
-            <p class="time">40 min</p>
-            <div>
-              <img src="./images/like.svg" alt="" />
-              <img src="./images/comments.svg" alt="" />
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img src="./images/image/rounded(4).svg" alt="" />
-          <p id="category">veg</p>
-          <div class="title-rating">
-            <p class="title">Russian Salad</p>
-            <div>
-              <img src="./images/star.svg" alt="" />
-              <span>4.5</span>
-            </div>
-          </div>
-          <div class="time-likes">
-            <p class="time">40 min</p>
-            <div>
-              <img src="./images/like.svg" alt="" />
-              <img src="./images/comments.svg" alt="" />
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img src="./images/image/rounded(1).svg" alt="" />
-          <p id="category">veg</p>
-          <div class="title-rating">
-            <p class="title">American Salad</p>
-            <div>
-              <img src="./images/star.svg" alt="" />
-              <span>2.5</span>
-            </div>
-          </div>
-          <div class="time-likes">
-            <p class="time">40 min</p>
-            <div>
-              <img src="./images/like.svg" alt="" />
-              <img src="./images/comments.svg" alt="" />
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img src="./images/image/rounded(2).svg" alt="" />
-          <p id="category">veg</p>
-          <div class="title-rating">
-            <p class="title">Russian Salad</p>
-            <div>
-              <img src="./images/star.svg" alt="" />
-              <span>4.5</span>
-            </div>
-          </div>
-          <div class="time-likes">
-            <p class="time">40 min</p>
-            <div>
-              <img src="./images/like.svg" alt="" />
-              <img src="./images/comments.svg" alt="" />
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img src="./images/image/rounded(4).svg" alt="" />
-          <p id="category">veg</p>
-          <div class="title-rating">
-            <p class="title">Italian Salad</p>
-            <div>
-              <img src="./images/star.svg" alt="" />
-              <span>3.5</span>
-            </div>
-          </div>
-          <div class="time-likes">
-            <p class="time">40 min</p>
-            <div>
-              <img src="./images/like.svg" alt="" />
-              <img src="./images/comments.svg" alt="" />
-            </div>
-          </div>
-        </div>
-
-
-      </div>
-
+      <div id="recipeContainer"></div>
     </div>
 
     <div class="footer-container">
@@ -350,7 +119,7 @@
       </div>
     </div>
   </div>
-  <script src="script.js" type=""></script>
+  <script src="script.js"></script>
 </body>
 
 </html>

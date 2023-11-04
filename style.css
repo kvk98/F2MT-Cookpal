@@ -139,6 +139,8 @@ nav>p:first-child{
     gap: 30px;
     padding-top: 40px;
 }
+
+
 #rating-filter{
     width: 20%;
     display: flex;
@@ -173,6 +175,7 @@ nav>p:first-child{
 
 .product-card{
     width: 280px;
+
 }
 .product-card>img{
     width: 100%;
@@ -180,7 +183,7 @@ nav>p:first-child{
     border-radius: 10px;
 }
 
-#cards-container{
+#recipeContainer{
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
@@ -197,6 +200,7 @@ nav>p:first-child{
     justify-content: space-between;
     align-items: center;
 }
+
 
 .product-card{
     display: flex;
@@ -352,6 +356,7 @@ nav>img{
         width: fit-content;
         height: 30px;
         margin-left: -30px;
+        margin-right: 20px;
     }
     .filter-div-container{
         overflow-x: hidden;
